@@ -1,0 +1,18 @@
+{% extends "h1.html" %}
+{% block content %}
+          <form method="POST">
+            {% csrf_token %}
+              {{form.as_p}}
+    <br>
+    <br>
+    <button class="btn" style="margin-left: 80px;" type="submit">Login</button>
+         </form>
+<h3>OR</h3>
+<div><a href="face_login">Press here for Face Login</a> </div>
+<div>
+                {% for message in messages %}
+                {{message}}
+                {% endfor %}
+            </div>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "h1.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+<body>
+<div class="row">
+    <div class="card" style="margin-left: 260px; max-width: 2000px; max-height: 25%;">
+    <div class="col s6 m20 19">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Your Profile</span>
+            username: {{ user.username }}<br><br>
+            {% if user.first_name == '' %}
+            <h4>Complete Your Profile</h4><br>
+                 <form method="POST">
+                {% csrf_token %}
+                     <label for="fname">First name:</label>
+                     <input type="text" id="fname" name="fname"><br><br>
+                     <label for="lname">Last name:</label>
+                     <input type="text" id="lname" name="lname"><br><br>
+                     <label for="email">Last name:</label>
+                     <input type="text" id="email" name="email"><br><br>
+                    <button class="btn" style="margin-left: 80px;" type="submit">Submit</button>
+                 </form>
+            {% else %}
+                Name: {{ user.first_name }} {{ user.last_name }}<br><br>
+                E-mail ID: {{user.email}}<br><br>
+                {{user.id}}
+            {% endif %}
+            </div>
+        <div class="card-action">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+{% endblock %}

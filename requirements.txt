@@ -145,8 +145,6 @@ ply
 prometheus-client
 prompt-toolkit 
 psutil 
-psycopg2
-py 
 pycodestyle
 pycosat
 pycparser 

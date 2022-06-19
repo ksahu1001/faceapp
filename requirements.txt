@@ -167,9 +167,6 @@ python-language-server
 pyttsx3
 pytz
 PyWavelets 
-pywin32
-pywin32-ctypes
-pywinpty
 PyYAML
 pyzmq
 QDarkStyle

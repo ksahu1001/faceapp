@@ -146,6 +146,7 @@ prometheus-client
 prompt-toolkit 
 psutil 
 pycodestyle
+psycopg2
 pycosat
 pycparser 
 pydocstyle 
@@ -156,7 +157,6 @@ PyNaCl
 pyodbc
 pyOpenSSL 
 pyparsing
-pypiwin32
 pyreadline
 pyrsistent 
 PySocks
